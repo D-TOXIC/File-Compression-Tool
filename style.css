@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: radial-gradient( circle farthest-corner at -4.5% 34.3%,  rgba(13,20,174,1) 0%, rgba(243,165,140,1) 90% ); 
+    color: #f0f0f0;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 340px;
+    animation: slideIn 0.8s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 5px #007bff, 0 0 10px #007bff;
+    }
+    to {
+        text-shadow: 0 0 20px #1e90ff, 0 0 30px #1e90ff;
+    }
+}
+
+input[type="file"] {
+    display: block;
+    margin: 15px auto;
+    padding: 10px;
+    background: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #bbb;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+input[type="file"]:hover {
+    background: #333;
+    color: #ddd;
+}
+
+button {
+    margin: 10px 5px;
+    padding: 10px 24px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5), 0 0 20px rgba(0, 123, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 123, 255, 0.7), 0 0 40px rgba(0, 123, 255, 0.6);
+    }
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+a {
+    margin-top: 15px;
+    display: block;
+    color: #4da8da;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    animation: fadeIn 2s ease 1;
+}
+
+a:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+}
